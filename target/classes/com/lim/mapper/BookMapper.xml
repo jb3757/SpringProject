@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lim.mapper.BookMapper">
+
+	<select id="bestBook" resultType="com.lim.vo.BookVO">
+		select BOOK_ID, BOOK_TITLE,
+		BOOK_AUTHOR, date_format(BOOK_PUBDATE,
+		"%Y.%m.%d") as PUBDATE,
+		BOOK_PRICE, BOOK_DESCRIPTION, BOOK_COVER,
+		BOOK_PUBLISHER
+		from book
+		order
+		by BOOK_SALESPOINT DESC
+		limit 5
+	</select>
+
+	<select id="recentBook" resultType="com.lim.vo.BookVO">
+		select BOOK_ID, BOOK_TITLE,
+		BOOK_AUTHOR, date_format(BOOK_PUBDATE, "%Y.%m.%d") as PUBDATE,
+		BOOK_PRICE, BOOK_DESCRIPTION, BOOK_COVER, BOOK_PUBLISHER
+		from book
+		order
+		by BOOK_PUBDATE desc
+		limit 5
+	</select>
+
+	<select id="searchBook" resultType="com.lim.vo.BookVO">
+		SELECT b.BOOK_ID,
+		b.BOOK_TITLE, b.BOOK_AUTHOR, date_format(b.BOOK_PUBDATE, '%Y.%m.%d')
+		as PUBDATE, b.BOOK_PRICE, b.BOOK_DESCRIPTION, b.BOOK_COVER,
+		b.BOOK_PUBLISHER, COALESCE(ROUND(AVG(r.REV_RATING), 1), 0) AS
+		reviewpoint
+		FROM book b
+		left join review r on b.BOOK_ID =
+		r.REV_ORDERITEM_BOOK
+		WHERE BOOK_TITLE LIKE #{book}
+		group by b.BOOK_ID
+		order by b.BOOK_SALESPOINT desc
+		limit 10
+	</select>
+
+	<select id="checkOrder" resultType="int">
+		select count(*) from
+		moonmoon.order where ORDER_USER_EMAIL = #{email}
+	</select>
+
+	<select id="getRecList" resultType="com.lim.vo.BookVO">
+		SELECT b.BOOK_ID, b.BOOK_TITLE, b.BOOK_AUTHOR,
+		DATE_FORMAT(b.BOOK_PUBDATE, '%Y.%m.%d') AS BOOK_PUBDATE,
+		b.BOOK_PRICE,
+		b.BOOK_DESCRIPTION, b.BOOK_COVER, b.BOOK_PUBLISHER,
+		COALESCE(ROUND(AVG(r.REV_RATING), 1), 0) AS reviewpoint,
+		b.BOOK_SALESPOINT
+		FROM book b
+		LEFT JOIN review r ON b.BOOK_ID =
+		r.REV_ORDERITEM_BOOK
+		<where>
+			<foreach collection="list" item="item" separator=" OR ">
+				BOOK_CATEGORYNAME LIKE #{item}
+			</foreach>
+		</where>
+		GROUP BY b.BOOK_ID, b.BOOK_TITLE, b.BOOK_AUTHOR, b.BOOK_PUBDATE,
+		b.BOOK_PRICE, b.BOOK_DESCRIPTION, b.BOOK_COVER, b.BOOK_PUBLISHER,
+		b.BOOK_SALESPOINT
+		ORDER BY b.BOOK_SALESPOINT DESC
+	</select>
+
+	<select id="getBookInfo" resultType="com.lim.vo.BookVO">
+		select BOOK_COVER,
+		BOOK_TITLE, BOOK_AUTHOR, BOOK_DESCRIPTION, BOOK_PRICE,
+		BOOK_POINT,
+		date_format(BOOK_PUBDATE, '%Y.%m.%d') as BOOK_PUBDATE from
+		book where
+		BOOK_ID = #{bookNum}
+	</select>
+
+	<select id="checkRecBook" resultType="int">
+		select count(*) from
+		RECENTBOOK where REC_USER_EMAIL = #{param1} and REC_BOOK_ID =
+		#{param2}
+	</select>
+
+	<insert id="insertRecBook">
+		INSERT INTO RECENTBOOK (REC_USER_EMAIL, REC_BOOK_ID,
+		REC_VIEWED_AT) VALUES
+		(#{param1}, #{param2}, #{param3})
+	</insert>
+
+	<update id="updateRecBook">
+		update RECENTBOOK set REC_VIEWED_AT = #{param1} where
+		REC_USER_EMAIL = #{param2} and
+		REC_BOOK_ID = #{param3}
+	</update>
+
+</mapper>

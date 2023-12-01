@@ -1,0 +1,88 @@
+.survey {
+    width: 100%;
+    height: 100%;
+}
+
+.survey_container {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* state */
+.survey_state_dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: 2%;
+}
+
+.survey_state_dot {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4e4eff;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+}
+
+.state_title {
+    font-size: large;
+    margin-bottom: 5%;
+}
+
+.state_myselect_keyword {
+    width: 100%;
+    margin: 5% auto;
+    flex-wrap: wrap;
+}
+
+.survey_myselect_btn {
+    width: 100%;
+    font-size: large;
+    padding: 1% 3%;
+    margin: 20% 1%;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #ccc;
+}
+
+.survey_state_dot_active {
+    background-color: #4e4eff;
+}
+
+/* 대분류 선택 버튼 */
+.survey_container_main {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+.survey_select_btn {
+    font-size: large;
+    padding: 1% 3%;
+    margin: 1%;
+    border: 1px solid #4e4eff;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.survey_selected {
+    color: white;
+    background-color: #4e4eff;
+}
+
+/* 다음 버튼 */
+.survey_next_btn {
+    font-size: large;
+    padding: 1% 4%;
+    margin: 1%;
+    border: 1px solid #4e4eff;
+    border-radius: 6px;
+    color: white;
+    background-color: #4e4eff;
+}

@@ -1,0 +1,159 @@
+.search {
+    margin: 3% auto;
+    width: 100%;
+}
+.search_header {
+    width: 60%;
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 1%;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search_header span:first-child {
+    color: #4E4EFF;
+}
+.search_header_right select {
+    border: 2px solid #4E4EFF;
+    border-radius: 4px;
+    padding: 1%;
+}
+.search_header_right select:focus {
+    border: 2px solid #4E4EFF;
+
+}
+.search_items {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.search_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 2% 2%;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+}
+
+.search_item_img {
+    width: 13%;
+}
+
+.search_item_img img {
+    width: 100%;
+}
+
+.search_item_info {
+    padding: 2%;
+    padding-left: 5%;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.search_item_info_title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.search_item_info_author {
+    font-size: small;
+}
+
+.search_item_info_price span:first-child {
+    font-weight: bold;
+    font-size: large;
+}
+
+.search_item_info_star {
+    width: 100%;
+}
+
+.search_item_info_star_num {
+    font-weight: bold;
+    padding-right: 2%;
+}
+
+.search_item_order {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_item_order a {
+    color: white;
+    background-color: #4E4EFF;
+    padding: 6% 12%;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+
+.search_item_order span {
+    font-weight: bolder;
+}
+
+.search_item_btn {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.search_item_btn img {
+    margin-bottom: 50%;
+    cursor: pointer;
+}
+
+/* 카테고리 네비게이션 */
+.search_category_header {
+    opacity: 0.5;
+    width: 100%;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+/* 페이징 */
+.booklist_paging {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    text-align: center;
+}
+.booklist_paging button {
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+    background: none;
+    padding: 0 8px;
+    margin: 0 0.1%;
+}
+.booklist_paging button:first-child,
+.booklist_paging button:last-child {
+    border: 1px solid #ccc;
+}
+.booklist_paging button:first-child:hover,
+.booklist_paging button:last-child:hover {
+    background: none;
+}
+.booklist_paging button:hover {
+    background-color: #ccc;
+}
+.active {
+    color: white;
+    background-color: #393939 !important;
+}

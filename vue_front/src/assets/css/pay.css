@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+body {
+    background-color: rgba(250, 250, 250, 1);
+    font-family: "Noto Sans KR", sans-serif;
+    /* line-height: 1.7; */
+}
+
+.payment_book_info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.payment_book_info td {
+    background-color: white;
+}
+
+.payment_book_info th,
+.payment_book_info td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.payment_book_info th {
+    display: flex;
+    border: none;
+}
+.payment_book_info th .num {
+    margin-left: 5%;
+    margin-top: 8px;
+}
+.payment_book_info th .text {
+    margin-left: 2%;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* 상품 정보 스타일 */
+.prod_area {
+    display: flex;
+    align-items: center;
+}
+
+.prod_thumb_box {
+    margin-right: 10px;
+}
+
+.prod_info_box {
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+.payment_book_info {
+    position: relative;
+    width: 67%;
+    padding-left: 7%;
+    margin-top: 1%;
+}
+.user_info {
+    margin: 0 30% 2% 7%;
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    top: 30px;
+    position: relative;
+}
+.payment_date {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: centers;
+    width: 20%;
+    height: 50px;
+    margin-bottom: 0;
+}
+.payment_total {
+}
+
+.user_add {
+    margin-left: 20px;
+}
+.user_info1 {
+    display: flex;
+}
+.user_info1 span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.payment_date .info1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.payment_date .info2 {
+    color: #4e4eff;
+}
+.payment_date .info2 span {
+    font-weight: bold;
+}
+.use_coupon {
+    margin: 0 30% 0 7%;
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.choice_coupon {
+    margin-left: 10px;
+    width: 20%;
+}
+.use_coupon button {
+    margin-left: 10px;
+    width: 60px;
+    height: 25px;
+    background-color: white;
+    border-radius: 12%;
+    border: 1px solid #000;
+}
+.use_coupon .coupon_text {
+    font-weight: bold;
+}
+.use_point {
+    margin: 0 30% 10% 7%;
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.use_point .point_text {
+    font-weight: bold;
+}
+.use_point input {
+    margin-left: 32px;
+    height: 25px;
+}
+.use_point button {
+    margin-left: 10px;
+    width: 60px;
+    height: 25px;
+    border-radius: 12%;
+    border: 1px solid #000;
+    background-color: white;
+}
+.user_havePoint {
+    margin-left: 10px;
+}
+.pay_area_ex {
+    position: fixed;
+    width: 17%;
+    height: 35%;
+    top: 29.5%;
+    left: 68%;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 12%;
+}
+.prod_name {
+    position: relative;
+    margin-left: 2%;
+    font-weight: bold;
+    top: -40px;
+}
+.book_price {
+    position: relative;
+    top: -25px;
+    margin-left: 2%;
+}
+.book_q {
+    position: relative;
+    top: -65px;
+    margin-right: 5%;
+    text-align: right;
+}
+.book_total {
+    position: relative;
+    width: 300px;
+    top: -45px;
+    float: right;
+    text-align: right;
+    margin-right: 5%;
+    font-weight: bold;
+}
+.user_add_detail button {
+    margin-left: 10px;
+    width: 60px;
+    height: 25px;
+    border-radius: 12%;
+    background-color: white;
+    border: 1px solid #000;
+}
+.pay_wrap_ex {
+    margin: 40px 35px 0 30px;
+}
+.won_ex {
+    text-align: right;
+    float: right;
+}
+.pay_fee {
+    margin-top: 20px;
+}
+.point {
+    text-align: right;
+    float: right;
+    left: 100px;
+}
+.pay_usePoint {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.pay_after {
+    margin-top: 25px;
+}
+.pay_getPoint {
+    margin-top: 17px;
+}
+.pay_button_ex {
+    position: relative;
+    width: 95%;
+    height: 55px;
+    border-radius: 12px;
+    border: none;
+    background-color: #4e4eff;
+    color: white;
+    margin-top: 25px;
+    margin-left: 9px;
+    text-align: center;
+}
+
+.pay_text {
+    font-weight: bold;
+    font-size: large;
+}
+.payment_title {
+    position: relative;
+    font-size: 1.6em;
+    font-weight: bolder;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+.progress {
+    position: absolute;
+    top: 22%;
+    right: 15%;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.before {
+    color: rgb(158, 158, 158);
+}
+.now {
+    color: #4e4eff;
+}
+.img_box img {
+    max-height: 280px;
+    height: 280px;
+    width: 190px;
+    border: 1px solid rgb(138, 138, 138);
+    object-fit: scale-down;
+}

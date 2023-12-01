@@ -1,0 +1,286 @@
+
+/* 메인 공용 스타일 */
+.display_none {
+  display: none;
+}
+
+.current {
+  color: white;
+  background-color: #595959;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.main_container {
+  width: 70%;
+  margin: 5% auto;
+}
+
+.main_title {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #4e4eff;
+}
+
+.main_item_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  /* 4개 이상의 박스가 있으면 다음 줄로 넘김 */
+  justify-content: space-between;
+  /* 가로로 오른쪽으로 정렬 */
+}
+
+.main_item_img {
+  width: 100%;
+  height: 80%;
+  min-height: 420px;
+}
+.main_item_img2 {
+  width: 100%;
+  height: 80%;
+  min-height: 300px;
+}
+
+.main_item_info {
+  padding: 5%;
+}
+
+.main_item_title {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.main_item_writer,
+.main_item_publisher {
+  line-height: 40px;
+  font-size: small;
+}
+
+/* 이미지슬라이더 */
+.image-slider {
+  text-align: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 높이를 80%로 설정 */
+  max-height: 800px;
+  /* 최대 높이 설정 (원하는 높이 값으로 변경 가능) */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  /* 이미지가 슬라이드의 높이를 100% 차지하도록 설정 */
+  object-fit: cover;
+  /* 이미지 비율 유지하며 슬라이드에 맞추도록 설정 */
+}
+
+.image-slider button {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 8px 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.image-slider button:hover {
+  background-color: white;
+  color: #4e4eff;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #4e4eff;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #4e4eff;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* 애니메이션을 위한 transition 추가 */
+}
+
+.prev-btn {
+  margin-left: 10px;
+}
+
+.next-btn {
+  margin-right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* 책추천 비로그인시 블러 */
+.blur {
+  filter: blur(10px);
+}
+
+.main_container_blur {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120%;
+}
+
+.main_container_blur h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.main_container_blur a {
+  margin-top: 1%;
+  border: 2px solid #4e4eff;
+  border-radius: 32px;
+  background-color: aliceblue;
+  color: #4e4eff;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 1% 10%;
+}
+
+.main_container_blur a:hover {
+  background-color: #4e4eff;
+  color: white;
+}
+
+/* 책추천 */
+.recommend_title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.recommend_username {
+  color: #4e4eff;
+  font-size: xx-large;
+}
+
+.recommend_item {
+  width: 21%;
+  height: 100%;
+  margin: 2% 0 0 0;
+  position: relative;
+}
+
+/* 베스트 */
+.main_contents_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_contents_header a {
+  font-size: large;
+  font-weight: bold;
+}
+
+.main_contents_item {
+  width: 15%;
+  height: 100%;
+  margin: 2% 0 0 0;
+}
+
+/* 이벤트배너 */
+.main_event {
+  width: 100%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.main_event_img {
+  width: 100%;
+  height: 300px;
+}
+
+/* 굿즈 */
+.goods_img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.goods_ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #4e4eff;
+  position: absolute;
+  left: 65%;
+  top: 65%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: white;
+  padding: 10% 0;
+  line-height: 200%;
+}
+
+/* toTop */
+.scroll_top_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  right: 2%;
+  bottom: 12%;
+  background-color: white;
+  padding: 1% 0.6%;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 50;
+  font-weight: bold;
+  color: #7c7c7c;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}

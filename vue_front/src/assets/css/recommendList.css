@@ -1,0 +1,140 @@
+.best {
+    margin: 3% auto;
+    width: 100%;
+  }
+  
+  .best_header {
+    width: 60%;
+    color: #4e4eff;
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 1%;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .best_items {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .best_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 2% 2%;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+  }
+  
+  .best_item_img {
+    width: 13%;
+  }
+  
+  .best_item_img img {
+    width: 100%;
+  }
+  
+  .best_item_info {
+    padding: 2%;
+    padding-left: 5%;
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .best_item_info_title {
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .best_item_info_author {
+    font-size: small;
+  }
+  
+  .best_item_info_price span:first-child {
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .best_item_info_star {
+    width: 100%;
+  }
+  
+  .best_item_info_star_num {
+    font-weight: bold;
+    padding-right: 2%;
+  }
+  
+  .best_item_order {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .best_item_order a {
+    color: white;
+    background-color: #4e4eff;
+    padding: 6% 12%;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 7%;
+  }
+  
+  .best_item_order span {
+    font-weight: bolder;
+  }
+  
+  .best_item_btn {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  
+  .best_item_btn img,
+  .best_item_btn a {
+    margin-bottom: 50%;
+  }
+
+  /* 책추천 비로그인시 블러 */
+.blur {
+  filter: blur(10px);
+}
+
+.main_container_blur {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120%;
+}
+
+.main_container_blur h2 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.main_container_blur a {
+  margin-top: 1%;
+  border: 2px solid #4e4eff;
+  border-radius: 32px;
+  background-color: aliceblue;
+  color: #4e4eff;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 1% 10%;
+}
+
+.main_container_blur a:hover {
+  background-color: #4e4eff;
+  color: white;
+}

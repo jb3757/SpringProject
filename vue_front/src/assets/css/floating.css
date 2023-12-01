@@ -1,0 +1,206 @@
+/* 스크롤바 스타일 */
+.floating_modal ::-webkit-scrollbar {
+  width: 4px;
+  /* 세로축 스크롤바 길이 */
+  height: 12px;
+  /* 가로축 스크롤바 길이 */
+}
+
+.floating_modal ::-webkit-scrollbar-track {
+  background-color: lightblue;
+}
+
+.floating_modal ::-webkit-scrollbar-track-piece {
+  background-color: #ccc;
+}
+
+.floating_modal ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: black;
+}
+
+/* 플로팅 */
+.floating_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  right: 2%;
+  bottom: 20%;
+  background-color: #f2f2f2;
+  padding: 0.8%;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.floating_btn img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.floating_num {
+  position: absolute;
+  font-size: small;
+  left: 60%;
+  top: -15%;
+  color: white;
+  background-color: #4e4eff;
+  padding: 6% 12% 9% 12%;
+  border-radius: 100px;
+}
+
+.floating_modal_wrap {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.floating_modal {
+  position: fixed;
+  right: 2%;
+  top: 5%;
+  width: 23%;
+  height: 90%;
+  background-color: white;
+  border-radius: 22px;
+  padding: 1.5%;
+}
+
+.floating_modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20%;
+}
+
+.floating_modal_header h2 {
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 3% 6%;
+  border-radius: 8px;
+  border: 2px solid #595959;
+}
+
+.floating_modal_header h2:nth-child(2) {
+  margin-right: 30%;
+}
+
+.floating_modal_header span {
+  font-size: x-large;
+}
+
+.floating_modal_list {
+  height: 65vh;
+  overflow: auto;
+}
+.floating_modal_list_header_left span:first-child {
+  color: #4e4eff;
+  font-weight: bold;
+  font-size: large;
+}
+
+.floating_modal_list_header_left span:last-child {
+  font-weight: bold;
+}
+
+.floating_modal_list_header_right {
+  width: 18%;
+  display: flex;
+  align-items: center;
+  font-size: small;
+  color: #7c7c7c;
+}
+
+.floating_modal_list_header_right img {
+  margin-right: 5%;
+}
+
+.floating_modal_list_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.floating_modal_item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 4%;
+  margin-bottom: 3%;
+}
+
+.floating_modal_item_img {
+  width: 25%;
+  height: 12%;
+  border-radius: 12px;
+}
+
+.floating_modal_item_img img {
+  width: 100%;
+  max-height: 110px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.floating_modal_item_info {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0%;
+  font-size: small;
+  padding: 2%;
+}
+
+.floating_modal_item_info h2 {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.floating_modal_item_info h2:hover {
+  text-decoration: underline;
+}
+
+.floating_modal_item_info_price {
+  width: 110%;
+}
+
+.floating_modal_item_info_price span:first-child {
+  font-weight: bold;
+  font-size: medium;
+  color: #4e4eff;
+  margin-right: 5%;
+}
+
+.floating_modal_item_info_price span:last-child {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.floating_modal_item_control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+  height: 10%;
+  font-size: x-large;
+}
+
+.floating_modal_item_control span {
+  margin-bottom: 1%;
+}
+
+.floating_modal_item_control img {
+  width: 50%;
+}

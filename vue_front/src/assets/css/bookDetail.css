@@ -1,0 +1,543 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.title_wri_sum {
+  /* border: 1px solid #000; */
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  /* top: 150px; */
+  margin-top: 150px;
+}
+
+.detail_title {
+    /* border: 1px solid #000; */
+    position: relative;
+    width: 90%;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 150%;
+}
+
+.writer_date {
+    position: relative;
+    /* border: 1px solid #000; */
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    width: 40%;
+    /* margin-left: 10px; */
+}
+
+.book_summary {
+    position: relative;
+    /* border: 1px solid #000; */
+    width: 60%;
+    margin-bottom: 100px;
+    line-height: 150%;
+}
+
+
+
+
+
+.img_price_btn {
+    position: relative;
+    /* border: 1px solid #000; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detail_img {
+    position: relative;
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 10%;
+    width: 275px;
+    /* border: 1px solid #000; */
+}
+
+.detail_img > img {
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+
+.img_right {
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    /* border: 1px solid #000; */
+
+}
+
+
+.det_top_star {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.top_star_score {
+    position: relative;
+    display: inline-block;
+    margin-left: 2%;
+    font-weight: 500;
+}
+
+.top_star_count {
+    display: inline-block;
+    font-weight: 300;
+}
+
+.price_point_set_1 {
+    /* border: #000 solid 1px; */
+    display: block;
+    margin-bottom: 2%;
+}
+.price_point_title_1 {
+    display: inline-block;
+    margin-right: 10%;
+    font-weight: 300;
+}
+
+.price_point_detail_1 {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 200%;
+}
+
+.won {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.price_point_set_2 {
+    /* border: #000 solid 1px; */
+    display: block;
+    margin-bottom: 2%;
+}
+
+.price_point_set_3 {
+    /* border: #000 solid 1px; */
+    display: block;
+    margin-bottom: 7%;
+}
+
+.price_point_title_2, .price_point_title_3 {
+    display: inline-block;
+    margin-right: 10%;
+    font-weight: 300;
+}
+
+.price_point_detail_2, .price_point_detail_3 {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 200%;
+}
+.won_3 {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+
+
+
+.count_btn_ib {
+    display: inline-block;
+}
+
+.count_btn {
+    border: #000 1px solid;
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.count_minus, .count_plus {
+    background: none;
+    border: none;
+}
+
+.count_minus{
+    position: relative;
+    display: inline-block;
+    padding: 0px 8px 8px 8px;
+    margin-right: 15px;
+}
+
+.count_minus > img {
+    width: 15px;
+}
+
+.count_plus {
+    position: relative;
+    display: inline-block;
+    padding: 4px 8px;
+}
+
+.count_plus > img {
+    width: 15px;
+}
+
+.count_num {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.payment_price {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400;
+    /* line-height: 200%; */
+    margin-left: 30px;
+    top: 7px;
+}
+
+.won_4 {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    top: 7px;
+    left: 5px;
+}
+
+
+
+
+.pay_cart_like {
+    /* border: #000 solid 1px; */
+    /* background-color: #4E4EFF; */
+    margin-top: 3%;
+    display: flex;
+}
+
+
+
+.pay_btn {
+    width: 170px;
+    background: #4E4EFF;
+    color: #fff;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.go_to_cart {
+    border: none;
+    background: none;
+    /* border: #000 1px solid; */
+    width: 50px;
+    display: inline-block;
+    margin-left: 16px;
+    position: relative;
+    top: 3px;
+}
+
+.go_to_cart > img {
+    width: 100%;
+}
+
+
+.detail_like_btn {
+    border: none;
+    background: none;
+    border: #000 1px solid;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    position: relative;
+    top: 3px;
+    
+}
+
+
+
+.detail_main_next_hr {
+    margin-top: 15%;
+    margin-bottom: 8%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+
+
+
+
+
+.detail_review_set {
+    width: 60%;
+    /* border: #000 1px solid; */
+    margin: 0 auto;
+}
+
+.rev_top {
+    display: flex;
+    justify-content: space-between;
+}
+.review_con_title {
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+.go_to_review {
+    border-radius: 5px;
+    background: rgba(89, 89, 254, 0.30);
+    border: none;
+    color: #4E4EFF;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+    margin-right: 20px;
+    width: 95px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.total_rec {
+    /* border: #000 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.total_rec_title {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 1.5%;
+}
+
+
+
+
+.total_star_rec {
+    display: flex;
+    margin-left: 50px;
+}
+
+
+
+.total_rec_num {
+    margin-left: 20px;
+    position: relative;
+    top: 5px;
+    color: #4E4EFF;
+    font-size: 1.5em;
+}
+
+.total_rec_num_10 {
+    font-size: 0.8em;
+    color: #000;
+    position: relative;
+    top: -2px;
+    left: 0;
+}
+
+
+
+.review_title_next_hr {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    height: 2px;
+    background-color: #000;
+    border: none;
+}
+
+.title_fillter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.rev_sec_title {
+    font-size: 1.2em;
+}
+
+.review_filltering {
+    margin-right: 20px;
+    border: none;
+    background: none;
+}
+
+
+.exc_return_set {
+    width: 60%;
+    /* border: #000 1px solid; */
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+}
+
+.exc_return_top {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exc_return_con_title {
+    font-size: 1.2em;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+.exc_return_con_text {
+    line-height: 150%;
+    width: 90%;
+    margin-bottom: 3%;
+}
+
+
+
+
+
+
+
+.write_rev {
+    margin-top: 5%;
+    /* display: none; */
+    /* border: #000 1px solid; */
+}
+
+.write_star {
+    /* border: #000 1px solid; */
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.write_rev_under_set {
+    display: flex;
+}
+
+.write_text {
+    width: 93%;
+    background-color: #E7E7F3;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.rev_send {
+    /* border: #000 1px solid; */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: none;
+    background: none;
+
+}
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #4E4EFF;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #4E4EFF;  } 
+
+
+
+
+.single_review {
+    /* border: #000 1px solid; */
+    border-bottom: #000 1px solid;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.single_rev_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.review_created_at_flex {
+    display: flex;
+}
+
+.single_review_writer {
+    font-weight: 300;
+}
+
+.single_review_rating_star, .single_review_rating_num {
+    margin-left: 20px;
+}
+
+.single_review_rating_num {
+    margin-left: 10px;
+}
+
+.review_created_at {
+    position: relative;
+    margin-right: 0;
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.review_comment {
+    /* border: #000 1px solid; */
+    width: 80%;
+    font-size: 1em;
+}
+
+.no_data_review {
+    margin: 0 auto;
+    display: flex;
+    /* border: #000 1px solid; */
+    justify-content: center;
+    align-items: center;
+}

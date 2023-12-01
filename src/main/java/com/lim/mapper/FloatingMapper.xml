@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lim.mapper.FloatingMapper">
+
+	<select id="recentbook" resultType="com.lim.vo.RecentBookVO">
+		SELECT rb.REC_VIEWED_AT, b.BOOK_TITLE, b.BOOK_COVER, b.BOOK_AUTHOR,
+		b.BOOK_PRICE, b.BOOK_ID
+		FROM recentbook rb
+		INNER JOIN book b ON rb.REC_BOOK_ID = b.BOOK_ID
+		WHERE rb.REC_USER_EMAIL=#{email} ORDER BY rb.REC_VIEWED_AT DESC
+		LIMIT 10;
+	</select>
+	
+	<select id="likedBook" resultType="com.lim.vo.RecentBookVO">
+		select * from likedbook where LIKE_USER_EMAIL = #{email}
+	</select>
+
+
+</mapper>

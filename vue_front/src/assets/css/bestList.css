@@ -1,0 +1,130 @@
+.star-icons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.best {
+  margin: 3% auto;
+  width: 100%;
+}
+
+.best_header {
+  width: 60%;
+  color: #4e4eff;
+  font-weight: bold;
+  font-size: x-large;
+  padding-bottom: 1%;
+  margin: 0 auto;
+  border-bottom: 2px solid #ccc;
+}
+
+.best_items {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.best_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0 2% 2%;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+}
+
+.best_item_img {
+  width: 13%;
+  height: 100%;
+}
+
+.best_item_img img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+}
+
+.best_item_info {
+  padding: 2%;
+  padding-left: 5%;
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.best_item_info_title > a {
+  font-weight: bold;
+  font-size: large;
+  color: #000;
+  line-height: 150%;
+}
+
+.best_item_info_author {
+  font-size: small;
+  line-height: 150%;
+}
+
+.best_item_info_price span:first-child {
+  font-weight: bold;
+  font-size: large;
+  line-height: 150%;
+}
+
+.best_item_info_summary {
+  white-space: wrap;
+  /* 글자가 줄바꿈 되도록 설정 */
+  overflow: hidden;
+  /* 넘치는 텍스트를 숨김 */
+  text-overflow: ellipsis;
+  /* 넘치는 텍스트를 ...으로 표시 */
+  max-width: 100%;
+  /* 원하는 최대 글자 수에 맞게 설정 */
+  max-height: 50px;
+  height: 100%;
+  line-height: normal;
+}
+
+.best_item_info_star {
+  width: 100%;
+}
+
+.best_item_info_star_num {
+  font-weight: bold;
+  padding-right: 2%;
+}
+
+.best_item_order {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.best_item_order a {
+  color: white;
+  background-color: #4e4eff;
+  padding: 6% 12%;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 7%;
+}
+
+.best_item_order span {
+  font-weight: bolder;
+}
+
+.best_item_btn {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.best_item_btn img {
+  margin-bottom: 50%;
+  cursor: pointer;
+}

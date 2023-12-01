@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lim.mapper.SurveyMapper">
+
+	<select id="checkSurvey" resultType="com.lim.vo.SurveyVO">
+		select *
+		from survey
+		where SUR_USER_EMAIL = #{email}
+	</select>
+
+	<insert id="insertSurvey" parameterType="com.lim.vo.SurveyVO">
+		INSERT INTO SURVEY (SUR_USER_EMAIL, SUR_LIKE_1, SUR_LIKE_2, SUR_LIKE_3,
+		SUR_LIKE_4, SUR_LIKE_5)
+		VALUES (#{SUR_USER_EMAIL}, #{SUR_LIKE_1}, #{SUR_LIKE_2}, #{SUR_LIKE_3},
+		#{SUR_LIKE_4}, #{SUR_LIKE_5})
+	</insert>
+
+
+</mapper>

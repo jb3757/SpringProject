@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lim.mapper.UserMapper">
+
+	<!-- <resultMap type="com.lim.vo.BoardVO" id="boardMap"> <id property="bno" 
+		column="bno"></id> <result property="title" column="title"/> <result property="content" 
+		column="content"/> <result property="writer" column="writer"/> <result property="regDate" 
+		column="regDate"/> </resultMap> <select id="getBoardList" resultMap="boardMap"> 
+		SELECT * FROM BOARD </select> <insert id="registBoard"> INSERT INTO BOARD 
+		(title, content, writer, regDate) VALUES (#{title}, #{content}, #{writer}, 
+		#{regDate}) </insert> <delete id="deletePost"> DELETE FROM BOARD WHERE BNO 
+		= #{no} </delete> -->
+
+	<select id="userLogin" resultType="com.lim.vo.UserVO">
+		select *
+		from user
+		where
+		USER_EMAIL=#{USER_EMAIL} and USER_PW=#{USER_PW}
+	</select>
+
+	<select id="userJoin" resultType="com.lim.vo.UserVO">
+		select *
+		from user
+		where
+		USER_EMAIL=#{USER_EMAIL}
+	</select>
+
+	<select id="checkEmail" resultType="int">
+		select count(*)
+		from user
+		where USER_EMAIL like #{email}
+	</select>
+
+	<insert id="joinUser">
+		INSERT INTO user
+		(USER_EMAIL, USER_PW, USER_SEX, USER_NAME, USER_AGEGROUP, USER_PHONE,
+		USER_REGDATE)
+		VALUES (#{USER_EMAIL}, #{USER_PW}, #{USER_SEX}, #{USER_NAME},
+		#{USER_AGEGROUP}, #{USER_PHONE}, #{USER_REGDATE})
+	</insert>
+
+	<select id="userPoint" resultType="int"> 
+		select USER_POINT
+		from user
+		where USER_EMAIL = #{email}
+	</select>
+
+
+</mapper>

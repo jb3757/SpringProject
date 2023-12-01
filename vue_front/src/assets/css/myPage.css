@@ -1,0 +1,881 @@
+.mypage_top {
+    margin: 0 auto;
+    /* border: #000 solid 1px; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 75%;
+    height: 45vh;
+    margin-top: 80px;
+    /* padding-bottom: 150px; */
+    border-bottom: #000 1px solid;
+}
+
+.mypage_top_left {
+    /* border: #000 solid 1px; */
+    width: 30%;
+    left: 0;
+    padding: 50px;
+}
+.mypage_profile_name_email {
+    display: flex;
+}
+
+.mypage_profile {
+    /* border: #000 1px solid; */
+    display: inline-block;
+    width: 55px;
+}
+
+.mypage_profile > img {
+    width: 55px;
+}
+
+.mypage_profile_right {
+    /* border: #000 solid 1px; */
+    width: 90%;
+    margin-left: 30px;
+}
+
+.name_grade {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.mypage_name {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.mypage_name > span {
+    font-size: 0.7em;
+    font-weight: 300;
+    margin-left: 3px;
+}
+
+.mypage_grade {
+    border: #ffb800 1px solid;
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #fffba6;
+    margin-top: -7px;
+    text-align: center;
+    justify-content: center;
+}
+
+.mypage_email {
+    font-weight: 100;
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.like_recent_point_cou {
+    width: 360px;
+    /* border: #000 1px solid; */
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
+.mypage_like {
+  border: #7A7AFF 1px solid;
+  background: #CACAFB;
+  /* display: flex; */
+  border-radius: 10px;
+  padding: 20px 10px;
+  width: 160px;
+  height: 100px;
+  word-wrap: break-word;
+  line-height: 150%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.mypage_like:hover {
+   cursor: default;
+}
+
+.like_recent_point_cou_text {
+    /* border: #000 1px solid; */
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+}
+
+.like_recent_point_cou_title {
+    font-size: 1em;
+    color: #000;
+    font-weight: 400;
+}
+
+.like_recent_point_cou_num {
+    width: 100%;
+    margin-top: 10px;
+    color: #4e4eff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.like_recent_point_cou_num > span {
+    font-size: 0.8em;
+    margin-left: 2px;
+}
+
+.mypage_top_right {
+    width: 80%;
+    /* border: #000 1px solid; */
+    padding: 50px 0 0 100px;
+}
+
+.mypage_slide_title {
+    /* border: #FFB800 1px solid; */
+    width: 110px;
+    height: 37px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #4e4eff;
+    margin-top: -7px;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #fff;
+}
+
+:root {
+    /* Color */
+    --vc-clr-primary: #000;
+    --vc-clr-secondary: #090f207f;
+    --vc-clr-white: #ffffff;
+
+    /* Icon */
+    --vc-icn-width: 1.2em;
+
+    /* Navigation */
+    --vc-nav-width: 30px;
+    --vc-nav-height: 30px;
+    --vc-nav-border-radius: 0;
+    --vc-nav-color: var(--vc-clr-primary);
+    --vc-nav-color-hover: var(--vc-clr-secondary);
+    --vc-nav-background: transparent;
+
+    /* Pagination */
+    --vc-pgn-width: 9px;
+    --vc-pgn-height: 9px;
+    --vc-pgn-margin: 4px;
+    --vc-pgn-border-radius: 10px;
+    --vc-pgn-background-color: var(--vc-clr-secondary);
+    --vc-pgn-active-color: #6969ff;
+}
+.carousel__prev,
+.carousel__next {
+    box-sizing: content-box;
+    background: var(--vc-nav-background);
+    border-radius: var(--vc-nav-border-radius);
+    width: var(--vc-nav-width);
+    height: var(--vc-nav-height);
+    text-align: center;
+    font-size: var(--vc-nav-height);
+    padding: 0;
+    color: var(--vc-nav-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 0;
+    cursor: pointer;
+    margin: 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+    color: var(--vc-nav-color-hover);
+}
+
+.carousel__next--disabled,
+.carousel__prev--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.carousel__prev {
+    left: 0;
+}
+
+.carousel__next {
+    right: 0;
+}
+
+.carousel--rtl .carousel__prev {
+    left: auto;
+    right: 0;
+}
+
+.carousel--rtl .carousel__next {
+    right: auto;
+    left: 0;
+}
+.carousel {
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    overscroll-behavior: none;
+}
+
+.carousel.is-dragging {
+    touch-action: none;
+}
+
+.carousel * {
+    box-sizing: border-box;
+}
+
+.carousel__track {
+    display: flex;
+    padding: 0 !important;
+    position: relative;
+}
+
+.carousel__viewport {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.carousel__icon {
+    width: var(--vc-icn-width);
+    height: var(--vc-icn-width);
+    fill: currentColor;
+}
+.carousel__pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    line-height: 0;
+    /* margin: 5px 0 0; */
+}
+
+.carousel__pagination-button {
+    display: block;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    padding: var(--vc-pgn-margin);
+    background: transparent;
+}
+
+.carousel__pagination-button::after {
+    display: block;
+    content: "";
+    width: var(--vc-pgn-width);
+    height: var(--vc-pgn-height);
+    border-radius: var(--vc-pgn-border-radius);
+    background-color: var(--vc-pgn-background-color);
+}
+
+.carousel__pagination-button:hover::after,
+.carousel__pagination-button--active::after {
+    background-color: var(--vc-pgn-active-color);
+}
+.carousel__slide {
+    scroll-snap-stop: auto;
+    flex-shrink: 0;
+    margin: 0 10px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fix iOS scrolling #22 */
+    transform: translateZ(0);
+}
+
+.mypage_slide_set {
+    /* border: #000 solid 1px; */
+    margin-top: 30px;
+    width: 90%;
+    margin-left: -20px;
+}
+
+.mypage_slide {
+    /* border: #000 1px solid; */
+    height: 250px;
+    /* margin-right: 5px; */
+}
+
+.my_rec_slide_img {
+    width: 100%;
+}
+
+.my_rec_slide_img > img {
+    width: 100%;
+}
+.confirm-button {
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 16px;
+    background-color: #4e4eff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 100px; /* 버튼의 너비 */
+    height: 40px;
+}
+
+.confirm-button-complete {
+    /* 구매확정 완료 버튼의 스타일 설정 */
+    background-color: #d3d3f5;
+    color: white; /* 흰색 텍스트색 */
+    font-size: 16px;
+    border-radius: 25px;
+    width: 100px; /* 버튼의 너비 */
+    height: 40px; /* 버튼의 높이 */
+    border: none;
+}
+
+.confirm-button:hover {
+    /* 공통 버튼에 대한 호버 효과 설정 */
+    opacity: 0.8;
+}
+
+.mypage_menu {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 13%;
+    width: 13%;
+    height: 1100px;
+    /* border: 1px solid #000; */
+}
+
+.topMyPage {
+    font-size: 1.8em;
+    margin-top: 50px;
+    /* margin-left: 40px; */
+    margin-bottom: 80px;
+}
+.sideName {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    /* margin-left: 10psx; */
+}
+
+.sideList {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-bottom: 15px; /* 원하는 간격 값으로 변경 */
+    color: rgb(155, 152, 152);
+}
+.textBlack {
+    color: black;
+}
+.activeText {
+    color: black; /* 활성화된 요소의 텍스트 색상 변경 */
+}
+.borderSideList {
+    background-color: rgba(230, 230, 230, 0.3);
+    padding: 20px 10px;
+}
+
+.right_box {
+    position: absolute;
+    display: inline-block;
+    /* top: 0; */
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 100px;
+    width: 55%;
+    height: 1010px;
+    /* border: 1px solid #000; */
+    /* background-color: aquamarine; */
+}
+
+.mypage_title_big {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 55px;
+    width: 100%;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    /* border: #000 1px solid; */
+    width: 105%;
+}
+
+.date-filter,
+.order-search,
+.status-filter {
+    margin-right: 20px;
+    /* border: #000 1px solid; */
+}
+
+.mypage_book_search {
+    padding: 2px 0 0 8px;
+}
+
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-box {
+    display: flex;
+    /* border: 1px solid #ccc; */
+    background-color: #eee;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.mypage_order_state {
+    border: #4e4eff 2px solid;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    /* background: #ccc; */
+    color: #000;
+}
+
+.mypage_delivery {
+    background: #cacafb;
+}
+
+.mypage_completed_order {
+    background: #4e4eff;
+    color: #fff;
+}
+
+.mypage_delivery_cancle {
+    background: #ffcbcb;
+    border: #ff0000 2px solid;
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.book-cover {
+    flex: 1;
+    margin-right: 20px;
+    width: 150px;
+    border: #000 1px solid;
+}
+
+.book-cover img {
+    width: 100%;
+}
+
+.book_info {
+    /* border: #000 1px solid; */
+    width: 100%;
+}
+
+.orderinfo_btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1px 12px;
+}
+
+.order_cnt_out {
+    font-size: 0.8em;
+    /* color: #FFB800; */
+}
+
+.right_box > img {
+    width: 100%;
+}
+
+.mypage_book_title {
+    margin-top: 40px;
+    font-size: 1.3em;
+    width: 80%;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.mypage_ordercnt {
+    font-size: 0.8em;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.mypage_orderpay {
+    font-size: 1.3em;
+}
+
+.review-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 200px;
+    border-bottom: 1px solid rgba(199, 195, 195, 0.267); /* 아래쪽에만 border 추가 */
+}
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+/* 회원정보 관리 */
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+
+.userUpdateTitle {
+  font-weight: bold;
+  font-size: 30px;
+}
+/* ... 기존 스타일 ... */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 15px;
+  margin: 0 auto;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.input-item label {
+  display: inline-block;
+  width: 70px; /* 레이블의 너비 조정 */
+  text-align: right;
+  margin-right: 20px;
+  /* border: #000 1px solid; */
+}
+.input-item input {
+  flex: 1; /* 입력 필드 너비 조정 */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100px; /* 너비를 2/5로 조절 */
+  /* readonly 상태일 때의 배경색과 글자색 설정 */
+  background-color: #f5f5f5; /* 배경색 */
+  color: #999; /* 글자색 */
+  pointer-events: none;
+}
+.input-item input:not([readonly]) {
+  /* readonly가 아닌 input에는 배경색과 글자색을 설정하지 않음 */
+  background-color: white;
+  color: black;
+  pointer-events: auto;
+}
+.button_group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.button_group button {
+  padding: 0 20px; /* 버튼의 내부 여백을 조절하여 크기를 조정 */
+  font-size: 16px; /* 버튼의 폰트 크기를 조정 */
+  background: #CACAFB;
+  border: 1px solid #6969ff;
+  border-radius: 5px;
+}
+
+.button_group button:hover {
+  background: #4E4EFF;
+  color: #fff;
+}
+
+.book_cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    border: #000 1px solid;
+}
+.status-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.section-divider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.password_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.pass_modal_content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 400px;
+}
+
+.pass_modal_content > h3 {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.modal h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+
+}
+
+.mypage_new_pw {
+  margin-bottom: 15px;
+}
+
+.mypage_new_pw > label {
+  margin-right: 20px;
+  text-align: right;
+  width: 100px;
+  display: inline-block;
+  /* border: #000 1px solid; */
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.book_cover > img {
+    width: 100%;
+}
+
+.passwordValidationMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  width: 85%;
+  margin-left: 20px;
+  line-height: 150%;
+}
+.info-content {
+    width: 100%; /* 이미지의 가로 너비를 원하는 크기로 조절해보세요 */
+    /* height: auto; 높이를 자동으로 조절하여 비율을 유지하도록 설정 */
+    /* max-width: 100%;  부모 요소 너비에 맞게 이미지 크기 조절 */
+    /* max-height: 100%; 부모 요소 높이에 맞게 이미지 크기 조절 */
+}
+
+.modal button {
+  padding: 8px 15px;
+  background-color: #003cff9f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.info-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.review-button {
+    background-color: #5552f7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal button + button {
+  margin-left: 10px;
+}
+
+
+.button-group-center {
+  /* border: 1px solid #000; */
+  text-align: right;
+  margin-top: 30px;
+}
+
+.mypage_group_first {
+  margin-right: 10px;
+}
+
+.button-group-center button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+.password-label {
+  margin-top: 30px; /* 필요에 따라 이 값을 조정해보세요 */
+}
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #ddd;
+}
+.validation-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+.order-date-right {
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+/* 회원등급 쿠폰 */
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+
+.insert_cou {
+  padding: 10px 50px;
+  margin-bottom: 50px;
+  border: #4E4EFF 1px solid;
+  border-radius: 5px;
+  background: #CACAFB;
+  margin-left: 30px;
+}
+
+.insert_cou:hover {
+  background: #4E4EFF;
+  color: #fff;
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* 등급 탑 마이페이지 grade */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+
+
+.mypage_top_second_right {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grade_info_wrap {
+    border: 1px solid #4e4eff;
+    width: 80%;
+    height: 60%;
+    margin: 4% 4% 4.6% 4%;
+    margin-top: 200px;
+    /* margin-top: ; */
+    border-radius: 13px;
+    background-color: white;
+    padding: 30px;
+}
+.grade_info_top {
+    display: flex;
+    float: right;
+    /* margin: 5% 5% 0 0; */
+}
+.next_grade {
+    font-size: large;
+    color: #a0a0a0;
+}
+.next_grade_db {
+    font-size: large;
+}
+
+.grade_under {
+    margin-top: 60px;
+    line-height: 300%;
+}
+
+
+.grade_info_second {
+    display: flex;
+    /* margin: 20% 4% 4% 4%; */
+}
+.grade_info_under {
+    display: flex;
+}
+.next_grade_s {
+    font-size: 1.5em;
+    color: #4E4EFF;
+    font-weight: 600;
+}
+.grade_info_under {
+    /* margin: 0% 4% 4% 4%; */
+}
+
+.ext_grade_u2 {
+    font-size: 1.4em;
+}

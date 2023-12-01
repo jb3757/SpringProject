@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lim.mapper.OrderMapper">
+
+	<insert id="insertOrder" parameterType="com.lim.vo.OrderVO"
+		useGeneratedKeys="true" keyProperty="ORDER_ID">
+		insert into moonmoon.order
+		(ORDER_USER_EMAIL, ORDER_PAY,
+		ORDER_ADDPOINT, ORDER_COST)
+		VALUES
+		(#{ORDER_USER_EMAIL}, #{ORDER_PAY}, #{ORDER_ADDPOINT}, #{ORDER_COST})
+	</insert>
+
+	<insert id="insertOrderItem">
+		insert into orderitem (ORDERITEM_ORDER_ID,
+		ORDERITEM_BOOK_ID, ORDERITEM_CNT, ORDERITEM_PRICE, ORDERITEM_POINT)
+		values (#{param1}, #{param2}, #{param3}, #{param4}, #{param5})
+	</insert>
+
+	<select id="bookCount" resultType="int">
+		select sum(ORDERITEM_CNT) as
+		ORDERITEM_CNT
+		from orderitem
+		where ORDERITEM_ORDER_ID = #{orderId}
+	</select>
+
+	<select id="originalPrice" resultType="int">
+		select
+		sum(ORDERITEM_PRICE*ORDERITEM_CNT) as oP
+		from orderitem
+		where
+		ORDERITEM_ORDER_ID = #{orderId}
+	</select>
+
+	<select id="payBookInfo" resultType="com.lim.vo.PayBookInfo">
+		SELECT b.BOOK_COVER as image, b.BOOK_TITLE as name, b.BOOK_PRICE as price,
+		o.ORDERITEM_CNT as quantity, (o.ORDERITEM_PRICE * o.ORDERITEM_CNT) as
+		totalPrice
+		FROM book b
+		JOIN orderitem o ON b.BOOK_ID = o.ORDERITEM_BOOK_ID
+		where o.ORDERITEM_ORDER_ID = #{orderId}
+	</select>
+
+</mapper>

@@ -1,0 +1,524 @@
+.moonroul {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+.roultitle {
+    font-size: 30px;
+    color: #4e4eff;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.roultitle1 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+.luckyroul {
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+.luckyroul > img {
+    width: 100%;
+}
+
+.roulette_set {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* border: #000 1px solid; */
+    width: 100%;
+    height: 55vh;
+
+    top: 25%;
+}
+
+.rouletter {
+    position: relative;
+    /* top: 30px; */
+    /* border: #000 1px solid; */
+    max-width: 600px;
+    max-height: 600px;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rouletter-bg {
+    /* border: 1px solid #000; */
+    width: 600px;
+    /* height: 95%; */
+    border-radius: 50%;
+    /* overflow: hidden; */
+    transform-origin: center;
+    transition-timing-function: ease-in;
+    transition: 3s;
+}
+
+.rouletter-bg > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .rouletter-wacu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url( "@/assets/img/roul_back.png") no-repeat;
+    background-size: 100%;
+    transform-origin: center;
+    transition-timing-function: ease-in-out;
+    transition: 5s;
+  } */
+.rouletter-arrow {
+    position: absolute;
+    display: inline-block;
+    top: -50px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 70px; /* 이미지의 가로 길이에 맞게 조정하세요 */
+    height: 100px;
+
+    background-image: url("@/assets/img/roulette_pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rouletter-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background: #fff;
+    border: 2px solid rgb(127, 127, 170);
+    color: rgb(127, 127, 170);
+    font-weight: bold;
+}
+
+.rouletter-btn:hover {
+    background: #6969ff;
+    color: #fff;
+    border: #fff 2px solid;
+}
+
+.hidden-input {
+    display: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-show {
+    /* showModal 변수가 true일 때 모달을 표시함 */
+    display: block;
+}
+.modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.modal-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4e4eff;
+}
+.modal-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.modal-footer {
+    text-align: right;
+}
+.modal-close {
+    cursor: pointer;
+    color: #999;
+}
+
+.roulinfo {
+    /* border: #4e4eff 1px solid; */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.roulinfo_1 {
+    margin-bottom: 20px;
+}
+
+.roulspan {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+}
+.roulspan1 {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.roulcustom {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+}
+.roulcustom1 {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.importantroul {
+    font-size: 30px;
+    font-weight: bold;
+}
+.roulguide {
+    font-size: 20px;
+}
+
+.luckyrouldesc {
+    width: 100%;
+}
+
+.luckyrouldesc > img {
+    width: 100%;
+}
+
+.awareroul {
+    /* border: 1px solid #000; */
+    margin-top: 50px;
+    padding-bottom: 200px;
+    padding-left: 10px;
+}
+
+.importantroul {
+    margin-bottom: 20px;
+}
+
+.roulline {
+    margin-bottom: 30px;
+}
+
+.roulguide {
+    line-height: 180%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* 출석체크 */
+.attendance {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 5%;
+    padding: 90px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.1);
+}
+.stamp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* 공간이 부족하면 다음 줄로 이동 */
+    align-items: center; /* 위쪽 정렬 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+
+    margin: 0 auto;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.stamp li {
+    /* 각 li 요소의 크기와 스타일 조정 */
+    width: 15%; /* 5개의 항목이 한 줄에 표시되므로 가로 너비는 20% */
+    height: 100px;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.stamp-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stamp-item img {
+    max-width: 80%; /* 이미지가 자동으로 축소되도록 함 */
+    max-height: 80%; /* 이미지가 자동으로 축소되도록 함 */
+    vertical-align: middle;
+}
+
+.attendance_button {
+    text-align: center;
+}
+.attendance_button button {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    background-color: #4e4eff;
+    box-shadow: 0 6px 6px rgba(29, 29, 104, 0.2);
+    margin-top: 5%;
+    color: #fff;
+    font-size: large;
+    border: none;
+}
+.attendance .bar_wrap .name {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.attendance .bar_wrap {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    width: 500px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    background-color: #4e4eff;
+    box-shadow: 0 6px 6px rgba(29, 29, 104, 0.2);
+}
+
+.benefit {
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    border: none;
+    width: 80%;
+
+    height: 200px;
+    text-align: center;
+}
+.benefit_text1 {
+    font-size: larger;
+    font-weight: bolder;
+}
+.benefit_text2 {
+    margin-top: 3%;
+    font-size: larger;
+    font-weight: bolder;
+}
+.emptyCal {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 105%;
+    height: 105%;
+    text-align: center;
+    line-height: 600%;
+    background-color: #f1f1f1;
+}
+.viewCal {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 105%;
+    height: 105%;
+    text-align: center;
+    line-height: 600%;
+}
+.mypage_menu {
+    border: none;
+}
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* 종료된 이벤트 */
+.closed_event_wrap {
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6%;
+    flex-wrap: wrap;
+}
+
+.closed_event_num1 {
+    position: relative;
+    width: 32%;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    height: 35%;
+    padding-top: 2%;
+    box-shadow: 0px 0px 5px 3px #ccc;
+}
+.closed_event_num2 {
+    position: relative;
+    width: 32%;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    height: 35%;
+    padding-top: 2%;
+    box-shadow: 0px 0px 5px 3px #ccc;
+}
+.closed_event_num3 {
+    position: relative;
+    width: 32%;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    height: 35%;
+    padding-top: 2%;
+    box-shadow: 0px 0px 5px 3px #ccc;
+}
+.closed_event_num4 {
+    position: relative;
+    width: 32%;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    height: 35%;
+    padding-top: 2%;
+    margin-top: -16%;
+    box-shadow: 0px 0px 5px 3px #ccc;
+}
+.event_img_1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.event_img_2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.event_img_3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.event_img_4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.event_img_1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율을 유지하면서 부모에 맞게 크기 조절 */
+}
+.event_img_2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율을 유지하면서 부모에 맞게 크기 조절 */
+}
+.event_img_3 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율을 유지하면서 부모에 맞게 크기 조절 */
+}
+.event_img_4 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 이미지 비율을 유지하면서 부모에 맞게 크기 조절 */
+}
+.event_title_1 {
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-left: 7%;
+    text-align: left;
+    font-weight: bold;
+}
+.event_title_2 {
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-left: 7%;
+    text-align: left;
+    font-weight: bold;
+}
+.event_title_3 {
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-left: 7%;
+    text-align: left;
+    font-weight: bold;
+}
+.event_title_4 {
+    margin-top: 15%;
+    margin-left: 7%;
+    margin-left: 7%;
+    text-align: left;
+    font-weight: bold;
+}
+.event_date_1 {
+    margin-top: 10%;
+    margin-left: 7%;
+}
+.event_date_2 {
+    margin-left: 7%;
+    margin-bottom: 10%;
+}
+.event_date_3 {
+    margin-bottom: 10%;
+    margin-left: 7%;
+}
+.event_date_4 {
+    margin-bottom: 10%;
+    margin-left: 7%;
+}
+
+
+
+
+
+
+
+
+
+
+
